@@ -4,23 +4,24 @@
  */
 package controlador;
 
-import modelo.Imagen;
-import vista.VentanaPrincipal;
+import modelo.Modelo;
+import vista.Vista;
+
 
 /**
  *
  * @author golden
  */
 public class Controlador {
-    private Imagen modelo;
-    private VentanaPrincipal vista;
-
-    public Controlador(Imagen modelo, VentanaPrincipal vista) {
-        this.modelo = modelo;
-        this.vista = vista;
+    private Modelo modelo;
+    private Vista vista;
+    
+    public Controlador() {
+        modelo = new Modelo();
+        vista = new Vista(modelo);
     }
-
-    public void mostrarImagen() {
-        vista.dibujarImagen(modelo);
+    
+    public Vista getVista() {
+        return vista;
     }
 }
