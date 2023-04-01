@@ -20,6 +20,7 @@ public class Modelo {
     
     public Modelo() {
         try {
+            
             imagen = ImageIO.read(new File("C:\\Users\\golden\\Desktop\\images.png"));
         } catch (IOException e) {
             e.printStackTrace();
